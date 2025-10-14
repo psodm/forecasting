@@ -1,0 +1,16 @@
+Resource ID,Resource Full Name,Employment Type,Resource Manager,Investment ID,Investment Name,Investment Type,Investment Role,Investment Manager,,A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13
+abcde01,"Mouse, Mickey",Contractor,"Starling, Clarice",SP4001,BENCH,Other Work,Sr Consultant,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+fghij03,"Mouse, Minnie",Contractor,"John, Little",SP4001,BENCH,Other Work,Sr Consultant,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+klmn1428,"Snow, John",Employee,"Starling, Clarice",SP8967,LEAVE,Other Work,Consultant,"Stark, Arya",Allocation,,,,8,,,,,,,,,,
+opqr1704,"America, Captain",Employee,"Starling, Clarice",SP4001,BENCH,Other Work,Sr Consultant,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+stuv1744,"The Bush Kangaroo, Skippy",Employee,"Starling, Clarice",DS4356,TRAINING,Other Work,Architect,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+wxyza01,"Duck, Donald",Employee,"John, Little",SP4001,BENCH,Other Work,Sr Consultant,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+bcde03,"Doe, John",Contractor,"John, Little",DS4356,TRAINING,Other Work,Sr Consultant,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+fghi4033,"Doe, Jane",Employee,"Granger, Hermione",S00000072027,RM CODE,Project,Resource Manager,"Starling, Clarice",Allocation,,,,,,,,,,,,,,
+jklmno01,"Bar, Baz",Contractor,"John, Little",OW1208,MEETING,Other Work,Sr Consultant,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+pq059341,"Leia, Princess",Contractor,"Starling, Clarice",S000000XYZAB,ACME - BGG Services,Project,Architect,"Erso, Jyn",Allocation,,,,,,,,,,,,,,
+rs004211,"Skywalker, Luke",Employee,"Middleton, Kate",SP4001,BENCH,Other Work,Senior Architect,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+rs004211,"Skywalker, Luke",Employee,"Middleton, Kate",DS4356,TRAINING,Other Work,Senior Architect,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+rs004211,"Skywalker, Luke",Employee,"Middleton, Kate",OW1208,MEETING,Other Work,Senior Architect,"Stark, Arya",Allocation,,,,,,,,,,,,,,
+rs004211,"Skywalker, Luke",Employee,"Middleton, Kate",S000000DEFGH,EMCA Capability Support,Project,Architect,"Scully, Dana",Allocation,24,24,24,24,24,24,24,24,24,24,24,,24,24
+za058780,"Solo, Han",Contractor,"John, Little",S000000IJKLM,EMCA Entitlement Program,Project,Senior Consultant,"Scully, Dana",Allocation,40,40,40,40,40,40,40,40,40,40,40,,,
