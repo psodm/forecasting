@@ -39,29 +39,29 @@ pub struct AllocationRow {
 
 #[derive(Debug)]
 pub struct Allocation {
-    resource_id: String,
-    resource_name: String,
-    resource_manager: String,
-    employment_type: String,
-    investment_id: String,
-    investment_name: String,
-    investment_type: String,
-    investment_role: String,
-    investment_manager: String,
-    a0: f64,
-    a1: f64,
-    a2: f64,
-    a3: f64,
-    a4: f64,
-    a5: f64,
-    a6: f64,
-    a7: f64,
-    a8: f64,
-    a9: f64,
-    a10: f64,
-    a11: f64,
-    a12: f64,
-    a13: f64,
+    pub resource_id: String,
+    pub resource_name: String,
+    pub resource_manager: String,
+    pub employment_type: String,
+    pub investment_id: String,
+    pub investment_name: String,
+    pub investment_type: String,
+    pub investment_role: String,
+    pub investment_manager: String,
+    pub a0: f64,
+    pub a1: f64,
+    pub a2: f64,
+    pub a3: f64,
+    pub a4: f64,
+    pub a5: f64,
+    pub a6: f64,
+    pub a7: f64,
+    pub a8: f64,
+    pub a9: f64,
+    pub a10: f64,
+    pub a11: f64,
+    pub a12: f64,
+    pub a13: f64,
 }
 
 pub fn convert_row_to_allocation(row: AllocationRow) -> Allocation {
@@ -98,4 +98,15 @@ pub fn some_allocation_to_float(value: Option<f64>) -> f64 {
         Some(value) => return value,
         None => return 0.0,
     }
+}
+
+pub fn get_unique_names(allocations: &Vec<Allocation>) -> Vec<String> {
+    let mut unique_names = Vec::new();
+    for allocation in allocations {
+        if !unique_names.contains(&allocation.resource_name) {
+            unique_names.push(allocation.resource_name.clone());
+        }
+    }
+    unique_names.sort();
+    unique_names
 }
