@@ -3,6 +3,7 @@ use dialoguer::{Select, Input, theme::ColorfulTheme};
 use std::collections::HashMap;
 
 mod allocations;
+mod util;
 
 fn run() -> Result<(), Box<dyn Error>> {
     loop {
@@ -39,8 +40,12 @@ fn run() -> Result<(), Box<dyn Error>> {
                     for name in allocations::get_unique_names(&allocations) {
                         names.push(name);
                     }
-                    println!("\n{:<30}|{:>10}{:>10}{:>10}{:>10}", "Resource", "Week 0", "Week 1", "Week 2", "Week 3");
-                    println!("-----------------------------------------------------------------------");
+                    let week0 = util::get_first_day_of_current_week();
+                    let week1 = week0 + chrono::Duration::days(7);
+                    let week2 = week1 + chrono::Duration::days(7);
+                    let week3 = week2 + chrono::Duration::days(7);
+                    println!("\n{:30}|{:>15}{:>15}{:>15}{:>15}", "Resource", week0.to_string(), week1.to_string(), week2.to_string(), week3.to_string());
+                    println!("-------------------------------------------------------------------------------------------");
                     for name in names {
                         get_benched_resources(&name, &allocations);
                     }
@@ -61,8 +66,12 @@ fn run() -> Result<(), Box<dyn Error>> {
                     for name in allocations::get_unique_names(&allocations) {
                         names.push(name);
                     }
-                    println!("\n{:<30}|{:>10}{:>10}{:>10}{:>10}", "Resource", "Week 0", "Week 1", "Week 2", "Week 3");
-                    println!("-----------------------------------------------------------------------");
+                    let week0 = util::get_first_day_of_current_week();
+                    let week1 = week0 + chrono::Duration::days(7);
+                    let week2 = week1 + chrono::Duration::days(7);
+                    let week3 = week2 + chrono::Duration::days(7);
+                    println!("\n{:30}|{:>15}{:>15}{:>15}{:>15}", "Resource", week0.to_string(), week1.to_string(), week2.to_string(), week3.to_string());
+                    println!("-------------------------------------------------------------------------------------------");
                     for name in names {
                         get_overallocated_resources(&name, &allocations);
                     }
@@ -107,7 +116,7 @@ fn get_overallocated_resources(name: &String, allocations: &Vec<allocations::All
     }
     for (key, value) in allocation_map.iter() {
         if value.week0 > 41.0 || value.week1 > 41.0 || value.week2 > 41.0 || value.week3 > 41.0 {
-            println!("{:<30}|{:>10.0}{:>10.0}{:>10.0}{:>10.0}", key, value.week0, value.week1, value.week2, value.week3);
+            println!("{:<30}|{:>15.0}{:>15.0}{:>15.0}{:>15.0}", key, value.week0, value.week1, value.week2, value.week3);
         }
     }
 }
@@ -134,7 +143,7 @@ fn get_benched_resources(name: &String, allocations: &Vec<allocations::Allocatio
     }
     for (key, value) in allocation_map.iter() {
         if value.week0 < 40.0 || value.week1 < 40.0 || value.week2 < 40.0 || value.week3 < 40.0 {
-            println!("{:<30}|{:>10.0}{:>10.0}{:>10.0}{:>10.0}", key, (40.0 - value.week0).abs(), (40.0 - value.week1).abs(), (40.0 - value.week2).abs(), (40.0 - value.week3).abs());
+            println!("{:<30}|{:>15.0}{:>15.0}{:>15.0}{:>15.0}", key, (40.0 - value.week0).abs(), (40.0 - value.week1).abs(), (40.0 - value.week2).abs(), (40.0 - value.week3).abs());
         }
     }
 }
